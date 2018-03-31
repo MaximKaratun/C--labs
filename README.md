@@ -1,2 +1,16 @@
 # C-labs
-C-labs Theory in Russian language is on my yandex.disk  The task indicated at the beginning of each main.cpp file, except for laboratory work with classes and structures.  Themes: Creating a simple application. The program design of linear structure. The operators of branching and selection. The statements in the loop and transfer control. Iteration and arithmetic cycles. Nested loops. Arrays. Pointers and links. The name of the array as a pointer. Dynamic arrays. Functions. The data types defined by the user. Structures and unions. Working with strings in C++. Streams input / output. File operations. Overloading of functions. Function templates. Simple classes and objects. Designing classes. The constructor and destructor of a class.
+/////////////////////////
+C++-Labs:
+The task indicated at the beginning of each main.cpp file, except for laboratory work with classes and structures.
+
+Themes:
+
+
+
+
+
+/////////////////////////
+C++ - Лабораторные работы :
+Задача указана в начале каждого файла main.cpp, за исключением лабораторных работ с классами и структурами.
+
+Темы:
