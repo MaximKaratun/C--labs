@@ -1,46 +1,52 @@
-//В книге на одной странице помещается K строк. Таким образом, на 1-й странице печатаются строки с 1-й по K-ю, на второй — с (K+1)-й по (2∙K)-ю и т.д. 
-//Напишите программу, которая по номеру строки в тексте определяет номер страницы, на которой будет напечатана эта строка, и порядковый номер этой строки на странице.
-//Входные данные
-//Вводятся два числа: K — количество строк, которое печатается на странице, и N — номер строки (1≤K≤200, 1≤N≤20000).
-//Выходные данные
-//Выведите два числа — номер страницы, на которой будет напечатана эта строка, и номер строки на странице.
+/* Exercise:
+
+    #In the book on one page is placed K lines. Thus, on the 1st page, lines from the 1st to the Kth are printed, the second line is printed with the (K + 1) -th by (2 · K) -y, and so on.
+    
+    #Write a program that, by the line number in the text, determines the page number on which this line will be printed, and the ordinal number of that line on the page.
+    
+    #Input data
+    
+    #Two numbers are entered: K is the number of lines that is printed on the page, and N is the line number (1=K=200, 1=N=20000).
+    
+    #Output
+    
+    #Print two numbers - the page number on which this line will be printed, and the line number on the page.
+*/ 
+
 
 #include <iostream>
-#include<math.h>
-using namespace std;
-int str,nc,k,n;						
-
+#include <Windows.h>
+#inclide <conio.h>	
+				
+int S; //Stroka
+int N; //Nomer
+int ST = 0; //Other Stroka
+int NC = 0; //New nomer
 
 int main (){
-	setlocale (LC_ALL,"Russian");
-	cout <<"Введите количество строк на странице ";
-	cin>>k;
-	cout<<"Введите номер строки из текста ";
-	cin>>n;
-	if( k>200){								//проверка условий
-		cout<<"Введены не верные данные  "<<endl;
-		if(n>20000){
-			cout<<"Введены не верные данные  "<<endl;
-			if(k<1){
-				cout<<"Введены не верные данные  "<<endl;
-				if(n<1){
-					cout<<"Введены не верные данные  "<<endl;
-				}
-			}
-		}
+	int raz=0;
+		make:; //Again proga
+	if(raz==1){
+		system("cls");
+		std::cout<<"\tAgain:";
 	}
-	else{
-		str=n/k;
-		nc=n%k;
-		if (nc==0){
-			nc=k;
-		}
-		else {
-			str=str+1;
-		}
-		cout<<"Номер страницы "<<str<<endl;
-		cout<<"Номер строки на странице "<<nc<<endl;
-	}
-	system("pause");
+	std::cout<<"\n\n\tEnter the number of lines per page:";
+	std::cin>>S;
+	Sleep(1000); //Krasota
+	std::cout<<"\n\n\tEnter the line number from the text:";
+	std::cin>>N;
+	std::cout<<"\t\t\t\tData checking.";Sleep(1000);std::cout<<".";Sleep(1000);std::cout<<".\n\n";
+	if(S>200||N>20000|S<1||N<1){								//???????? ???????
+		std::cout<<"Invalid input. Go again:\n\n";raz=1; Sleep(1000);goto make;}
+		
+	ST=N/S;
+	NC=N%S;
+	if (NC==0) NC=S;
+	else   ST=ST+1;
+	
+	std::cout<<"\tPage number: "<<ST<<std::endl;
+	Sleep(200);
+	std::cout<<"\tLine number per page: "<<NC<<std::endl;
+	getch();
 	return 0;
 }
