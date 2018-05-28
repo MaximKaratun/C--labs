@@ -16,7 +16,7 @@
 
 #include <iostream>
 #include <Windows.h>
-#inclide <conio.h>	
+#include <conio.h>	
 				
 int S; //Stroka
 int N; //Nomer
